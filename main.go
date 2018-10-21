@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/tarunama/reqcrawler/reqcrawler"
 	"fmt"
+	"github.com/tarunama/reqcrawler/reqcrawler"
 )
 
 func main() {
