@@ -1,18 +1,18 @@
 package reqcrawler
 
 import (
-	"github.com/PuerkitoBio/goquery"
 	"fmt"
+	"github.com/PuerkitoBio/goquery"
 	"strings"
 )
 
 func GetCompanyList() []string {
 	var (
-		domain       string = "https://www.wantedly.com/"
-		path         string = "search?"
-		page         string = "1"
-		query        string = "page=" + page + "&q=python&t=projects"
-		url          string = domain + path + query
+		domain       = "https://www.wantedly.com/"
+		path         = "search?"
+		page         = "1"
+		query        = "page=" + page + "&q=python&t=projects"
+		url          = domain + path + query
 		company_list []string
 	)
 
