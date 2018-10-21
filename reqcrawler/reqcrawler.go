@@ -13,7 +13,7 @@ func GetCompanyList() []string {
 		page         = "1"
 		query        = "page=" + page + "&q=python&t=projects"
 		url          = domain + path + query
-		company_list []string
+		companyList []string
 	)
 
 	doc, err := goquery.NewDocument(url)
@@ -22,11 +22,11 @@ func GetCompanyList() []string {
 	}
 
 	doc.Find(".company-name").Each(func(_ int, s *goquery.Selection) {
-		if company_name := s.Text(); company_name != "" {
-			company_name := strings.TrimRight(company_name, "\n")
-			company_list = append(company_list, company_name)
+		if companyName := s.Text(); companyName != "" {
+			companyName := strings.TrimRight(companyName, "\n")
+			companyList = append(companyList, companyName)
 		}
 	})
 
-	return company_list
+	return companyList
 }
